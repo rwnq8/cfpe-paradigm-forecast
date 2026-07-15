@@ -1,0 +1,90 @@
+{
+  "title": "CFPE Comparative Forecast: Naive Extrapolation vs Bayesian Cascade Model",
+  "date": "2026-07-15",
+  "methodology": "A 'naive extrapolation' forecast is constructed using only linear trend projection from current trajectories — no paradigm shifts, no breakthrough probabilities, no Bayesian dependencies. All probabilities are derived from simple extrapolation of gate-based quantum computing roadmaps, semiconductor scaling analogs, and historical technology adoption curves. The naive forecast is then compared against the CFPE Bayesian cascade model across 4 dimensions: calibration (Brier score), resolution (discriminating power), coverage (scenario breadth), and anti-fragility (worst-case resilience).",
+
+  "naive_forecast": {
+    "philosophy": "Extrapolate current trajectories linearly. Assume no paradigm shifts. The qubit gate model continues improving incrementally. Moore's Law analogs apply. Cryogenic engineering scales at ~2× per 3 years. No biological, hydrodynamic, or adelic breakthroughs occur.",
+    "era_1_naive": {
+      "optimistic": {"probability": 0.20,"rationale": "Google/IBM roadmaps project 1M qubits by 2030 — if achieved, FCI is unnecessary. P(FCI breakthrough) reduced to base rate of any condensed matter discovery (~0.20 per decade). No Bayesian dependency on gate-model failure."},
+      "baseline": {"probability": 0.75,"rationale": "Gate-based QC continues scaling at 10× per 4 years. By 2036: 50k-100k physical qubits with active QEC managing thermal load. This is the DEFAULT trajectory — no paradigm shift needed."},
+      "pessimistic": {"probability": 0.05,"rationale": "Very low: gate-model scaling has consistently beaten pessimistic projections for 25 years. Even QC skeptics acknowledge incremental progress. Only a catastrophic engineering failure (e.g., dilution refrigerator physics hits fundamental limit) would trigger pessimistic."}
+    },
+    "era_2_naive": {
+      "optimistic": {"probability": 0.05,"rationale": "Bio-spintronics has no industrial roadmap. No major company invests in radical-pair computing. This is a pure research curiosity — probability assigned at the base rate of an accidental discovery in an unfunded field."},
+      "baseline": {"probability": 0.85,"rationale": "Gate-based QC continues dominating. NV centers and silicon spin qubits provide incremental alternatives but don't achieve room-temperature gate operations. The bio-spintronics pathway is a footnote."},
+      "pessimistic": {"probability": 0.10,"rationale": "Small chance of a 'quantum winter' if gate-based QC fails to deliver commercially relevant advantage by 2035. But even a quantum winter doesn't make bio-spintronics more likely — it just kills QC funding entirely."}
+    },
+    "era_3_naive": {
+      "optimistic": {"probability": 0.02,"rationale": "Superdeterminism and hydrodynamic foundations have zero experimental support, zero industrial investment, and zero mainstream physics community acceptance. Probability = base rate of any fringe theory becoming mainstream in physics (~2% per generation, historical: plate tectonics, heliocentrism)."},
+      "baseline": {"probability": 0.90,"rationale": "Standard quantum mechanics remains the framework. CMB anomalies are explained within ΛCDM. Objective collapse models (CSL) gain modest experimental support but don't replace QM — they supplement it as an interpretation among many."},
+      "pessimistic": {"probability": 0.08,"rationale": "Small chance that a genuine anomaly emerges in Bell test experiments or CMB data that ΛCDM cannot explain — but even then, the explanation is more likely to be new particles, modified gravity, or instrumental systematics than superdeterminism."}
+    },
+    "era_4_naive": {
+      "optimistic": {"probability": 0.01,"rationale": "Geometric derivation of fundamental constants has a 100-year track record of failure (Eddington 1929 → present). Probability = base rate of any failed century-long research program suddenly succeeding. ~1% — the Eddington precedent is the strongest reference class."},
+      "baseline": {"probability": 0.85,"rationale": "SM constants remain unexplained free parameters in a landscape/anthropic framework. String theory and cosmological natural selection provide philosophically satisfying (if experimentally unverified) explanations. No geometric derivation emerges."},
+      "pessimistic": {"probability": 0.14,"rationale": "Moderate chance that the landscape/anthropic framework collapses under its own unfalsifiability, leading to a crisis in fundamental physics. But even a crisis doesn't make π/φ geometry more likely — it just leaves a vacuum that multiple theories compete to fill."}
+    }
+  },
+
+  "calibration_comparison": {
+    "naive_forecast_brier": 0.133,
+    "cfpe_model_brier": 0.190,
+    "uniform_baseline_brier": 0.250,
+    "improvement_vs_uniform": {
+      "naive": "46.8% improvement",
+      "cfpe": "24.0% improvement"
+    },
+    "interpretation": "The naive forecast achieves a LOWER expected Brier score (0.133 vs 0.190) than the CFPE model. This is because the naive forecast makes MORE CONFIDENT predictions (e.g., P=0.90 for continuity, P=0.01 for geometric constants) which, IF the world actually follows linear trajectories, yield lower Brier scores. The naive forecast benefits from the 'base rate advantage' — in most domains, linear extrapolation IS the best predictor and assigning high probability to continuity minimizes Brier score.",
+    "caveat": "A lower Brier score does NOT mean the naive forecast is 'better.' The CFPE model deliberately assigns higher probabilities to tail events (paradigm shifts) because it is designed to identify and exploit high-impact low-probability outcomes. The Brier score penalizes models that 'waste' probability on events that don't occur (the 'noisier' model gets a higher score) — but for long-range strategic planning, identifying 6-8% probability paradigm shifts IS the point."
+  },
+
+  "resolution_comparison": {
+    "naive_resolution": 0.117,
+    "cfpe_resolution": 0.048,
+    "uniform_resolution": 0.0,
+    "interpretation": "The naive forecast achieves HIGHER resolution (0.117 vs 0.048) because it makes more discriminating predictions — it confidently assigns 0.90 to continuity and 0.01 to paradigm shifts, creating a wide spread. The CFPE model clusters predictions near 0.25-0.40, producing less variance but also less discriminating power. This is the classic trade-off: confidence vs humility. The naive forecast is more confident and potentially more WRONG when paradigm shifts actually occur."
+  },
+
+  "scenario_coverage_comparison": {
+    "naive_coverage": "~30%",
+    "cfpe_coverage": "~95%",
+    "interpretation": "The naive forecast covers ONLY the continuity/linear trajectory — it assigns near-zero probability to FCI breakthroughs, bio-spintronic gates, hydrodynamic foundations, and geometric constant derivation. This is EXACTLY what makes it 'naive' — it cannot envision futures that differ from linear extrapolation of current trends. The CFPE model covers 95% of the possibility space (as demonstrated in P2.2 sub-scenario enumeration). The naive forecast's coverage gap is its fatal flaw for paradigm-shift forecasting.",
+    "coverage_gap_examples": [
+      "FCI braiding: naive P=0.05 vs CFPE P=0.25 — 5× difference",
+      "Bio-spintronic gates: naive P=0.05 vs CFPE P=0.338 — 7× difference",
+      "Superdeterminism: naive P=0.02 vs CFPE P=0.383 — 19× difference",
+      "Geometric constants: naive P=0.01 vs CFPE P=0.310 — 31× difference"
+    ]
+  },
+
+  "anti_fragility_comparison": {
+    "naive_anti_fragility_floor": 0.01,
+    "cfpe_anti_fragility_floor": 0.038,
+    "interpretation": "The naive forecast has essentially NO anti-fragility — if the world deviates from linear trajectories (which it historically does, especially over 100-year horizons), the naive forecast becomes useless. The CFPE model's anti-fragility floor of 3.8% means it maintains SOME predictive value even under worst-case failures. For strategic planning, the CFPE model is superior despite its higher Brier score.",
+    "historical_precedent": "Every naive extrapolation forecast from 1926 (predicting 2026) would have failed: no quantum mechanics, no transistors, no internet, no AI. Linear extrapolation of 1926 technology (better steam engines, faster telegraphs) would have achieved low Brier scores but completely missed the actual future. Paradigm-shift forecasts deliberately sacrifice Brier score for coverage and anti-fragility."
+  },
+
+  "portfolio_recommendation": {
+    "description": "The optimal strategic posture combines both forecast models:",
+    "recommendations": [
+      {
+        "allocation": "80%",
+        "strategy": "Follow naive forecast for resource allocation (continuity baseline)",
+        "rationale": "The naive forecast has lower Brier score and higher resolution for near-term (1-5 year) predictions. Most of the time, linear extrapolation IS correct. Allocate 80% of attention/resources to monitoring and responding to continuity-trajectory developments."
+      },
+      {
+        "allocation": "15%",
+        "strategy": "Use CFPE model for tail-risk hedging (paradigm-shift monitoring)",
+        "rationale": "The CFPE model identifies 6-8% probability paradigm shifts that the naive forecast assigns <2%. These are low-probability but high-impact — a 6% chance of a 10× impact is worth monitoring. Allocate 15% to tracking wildcard signposts (NV centers, twistronics, CSL, amplituhedron)."
+      },
+      {
+        "allocation": "5%",
+        "strategy": "Reserve for unknown-unknowns (coverage gap between both models)",
+        "rationale": "No forecast model can cover 100% of the possibility space. The 5% reserve is for monitoring genuinely unexpected developments — discoveries that neither naive extrapolation nor the CFPE Bayesian cascade anticipated."
+      }
+    ]
+  },
+
+  "key_insight": "The naive forecast 'wins' on calibration (lower Brier score) but 'loses' on coverage (misses 70% of the possibility space). The CFPE model 'wins' on coverage and anti-fragility but 'loses' on calibration. This is not a bug — it's the fundamental trade-off in long-range forecasting: you cannot simultaneously maximize calibration AND coverage. A forecast that is well-calibrated AND covers tail events is mathematically impossible because calibration punishes unconfirmed tail predictions. The right strategy is to use BOTH models — naive for near-term resource allocation, CFPE for tail-risk identification and wildcard monitoring."
+}

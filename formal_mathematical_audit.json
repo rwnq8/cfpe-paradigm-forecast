@@ -1,0 +1,156 @@
+{
+  "title": "CFPE Formal Mathematical Audit: Era 3 (Hydrodynamic Foundations) + Era 4 (Adelic Physics)",
+  "date": "2026-07-15",
+  "version": "1.0",
+  "methodology": "Each core claim from Eras 3 and 4 is extracted from the QNFO research corpus, restated in formal mathematical language, and assessed for: (a) logical coherence — does the claim contain internal contradictions? (b) empirical content — does the claim make a prediction distinguishable from standard physics? (c) provability — can an LLM verify or refute this claim from available evidence? Each claim receives a verifiability grade: VERIFIED (proven from existing evidence), REFUTED (contradicted by evidence), COHERENT_UNVERIFIABLE (logically sound but no empirical content — requires human expert), or INCOHERENT (contains logical contradictions — requires human expert).",
+
+  "era_3_claims": [
+    {
+      "id": "E3-C1",
+      "claim": "Wavefunction collapse is a mathematical artifact of mismatched probability frameworks — it disappears when quantum mechanics is reformulated as a classical, deterministic, hydrodynamic theory on a non-simply-connected topological substrate.",
+      "formal_restatement": "There exists a deterministic dynamical system with state space M (a non-simply-connected manifold) and evolution operator Φ_t: M→M such that for every quantum system described by wavefunction ψ on Hilbert space H, there exists a probability measure μ_ψ on M satisfying: (1) ⟨ψ|Â|ψ⟩ = ∫_M A(x) dμ_ψ(x) for all observables Â, (2) the time evolution of μ_ψ under Φ_t reproduces the Schrödinger evolution of ψ, and (3) the 'collapse' upon measurement corresponds to Bayesian updating of μ_ψ under the measurement constraint — no physical collapse occurs.",
+      "logical_coherence": "COHERENT — this is the de Broglie-Bohm pilot-wave program extended to a topological substrate. Bell's theorem does not forbid deterministic hidden-variable theories if they are non-local; the 'non-simply-connected topological substrate' is a proposed mechanism for non-locality. The claim is logically consistent with known physics.",
+      "empirical_content": "NONE — currently, no experiment distinguishes this from standard quantum mechanics. Condition (3) is the core difficulty: if the theory reproduces ALL QM predictions exactly, it is observationally equivalent to QM and has no empirical content. The CMB prediction (E3-C3) is the only proposed empirical anchor.",
+      "llm_verifiability": "UNVERIFIABLE — an LLM cannot construct the explicit dynamical system Φ_t, prove its equivalence to QM, or verify the non-simply-connected topological substrate's physical realizability. This requires a working theoretical physicist.",
+      "verifiability_grade": "COHERENT_UNVERIFIABLE — [Human expert required: theoretical physics, quantum foundations]",
+      "critical_question_for_human": "Under what conditions would the explicit construction of Φ_t require properties that are inconsistent with known physics (e.g., superluminal signaling, negative probabilities, infinite-dimensional non-separable state spaces)? If such inconsistencies are inevitable, the claim is refuted. If they are avoidable, the claim is coherent but untestable until Φ_t is explicitly constructed."
+    },
+    {
+      "id": "E3-C2",
+      "claim": "The Page-Wootters mechanism within the Wheeler-DeWitt constraint produces conditional states that naturally organize into ultrametric hierarchies (Bruhat-Tits buildings). The Bridge Theorem proves this connection.",
+      "formal_restatement": "Given a Hilbert space H = H_C ⊗ H_R with Wheeler-DeWitt constraint Ĥ|Ψ⟩ = 0, and a clock observable T̂_C with spectrum σ(T̂_C), define conditional states |ψ(τ)⟩_R = ⟨τ|_C|Ψ⟩/||⟨τ|_C|Ψ⟩||. Define distance d(τ₁,τ₂) = 1 − |⟨ψ(τ₁)|ψ(τ₂)⟩|. Theorem: Under the condition that Ĥ_CR (the clock-rest interaction Hamiltonian) is diagonal in the clock Hamiltonian eigenbasis, d satisfies the strong triangle inequality d(τ₁,τ₃) ≤ max(d(τ₁,τ₂), d(τ₂,τ₃)) — i.e., d is an ultrametric. The resulting hierarchy of conditional states forms a Bruhat-Tits building T_p of valence p+1 where p is the radix of the clock spectrum's discrete scale invariance.",
+      "logical_coherence": "COHERENT — the theorem's proof sketch follows a standard three-stage argument: (1) global constraint induces equivalence relation → ultrametric quotient, (2) fidelity overlap matrix satisfies Parisi condition under diagonal Ĥ_CR, (3) ultrametric hierarchy determines Bruhat-Tits building. The mathematical logic is sound. However, the sufficient condition (diagonal Ĥ_CR) is extremely restrictive — the computational study (conditional-state-distances-pw-clocks) shows that generic Ĥ_CR produces 29-35% Parisi violation.",
+      "empirical_content": "MODEST — the theorem predicts that if a physical system satisfies the diagonal Ĥ_CR condition, its conditional states WILL be ultrametric. The trapped-ion quantum simulation proposed in the QNFO corpus would test this prediction. However, no such simulation has been performed. The prediction is physically testable but currently untested.",
+      "llm_verifiability": "PARTIALLY_VERIFIABLE — the computational component (29-35% Parisi violation for generic Ĥ_CR) is numerically verifiable. The theorem itself (diagonal Ĥ_CR → ultrametricity) is a mathematical claim that an LLM can assess for internal consistency but cannot formally prove. The physical realizability of diagonal Ĥ_CR is a physics question.",
+      "verifiability_grade": "COHERENT_UNVERIFIABLE — [Human expert required: mathematical physics, quantum gravity]",
+      "critical_question_for_human": "Is the diagonal Ĥ_CR condition physically realizable in any known system (including idealized Gedankenexperiment)? If not, the theorem is mathematically interesting but physically vacuous — it describes a condition that nature cannot implement. If yes, which physical system and what would the experimental signature be?"
+    },
+    {
+      "id": "E3-C3",
+      "claim": "Superdeterminism resolves Bell's theorem without non-locality. CMB anomalies (hemispherical power asymmetry, low-ℓ anomaly) are signatures of discrete scale invariance from the underlying ultrametric structure.",
+      "formal_restatement": "Claim (a): There exists a superdeterministic hidden-variable theory such that for all Bell test experiments E₁,...,E_n conducted at spacetime points (x₁,t₁),...,(xₙ,tₙ) with measurement settings a₁,...,aₙ, the joint probability distribution P(a₁,...,aₙ, λ) factorizes as P(a₁,...,aₙ|λ)P(λ) where λ is the complete initial state of the universe at the Big Bang, and P(a₁,...,aₙ|λ) encodes the 'conspiracy' that measurement settings are correlated with hidden variables via the initial conditions. Claim (b): CMB angular power spectrum C_ℓ = A(ℓ/ℓ₀)^{1-n_s}[1 + B·cos(2π/ln(q)·ln(ℓ/ℓ₀) + φ)] with q ≈ e.",
+      "logical_coherence": "COHERENT — superdeterminism is logically consistent. Bell's theorem assumes measurement independence (P(a|λ) = P(a)), which superdeterminism denies. The logical structure is sound: if measurement settings are NOT independent of hidden variables, Bell's inequality does not constrain local theories. The CMB prediction is mathematically well-defined — a specific functional form with testable parameters.",
+      "empirical_content": "YES — the CMB prediction (claim b) is empirically TESTABLE and was proposed as a search protocol to CMB-S4/Simons Observatory. This is the SINGLE empirically testable claim in all of Era 3. If CMB-S4 detects log-periodic oscillations at >5σ with q ≈ e, the prediction is confirmed. If CMB-S4 excludes such oscillations, the prediction is falsified. The result is expected by ~2035.",
+      "llm_verifiability": "VERIFIABLE_VIA_EXPERIMENT — the LLM cannot perform the CMB analysis, but it CAN monitor arXiv for CMB-S4/Simons Observatory publications reporting on log-periodic oscillation searches. This is the candidate CFPE-E3-C1 in the falsification register, with earliest check date 2032-12-31.",
+      "verifiability_grade": "TESTABLE — [Experimental resolution expected by 2035. LLM can monitor via arXiv.]",
+      "critical_question_for_human": "What is the predicted amplitude B of the log-periodic oscillations? The prediction is incomplete without specifying B — without it, any null result can be explained as 'B was too small to detect.' A complete prediction must specify (q, B, ℓ₀, φ) with uncertainty ranges before data analysis begins. Has this been done?"
+    },
+    {
+      "id": "E3-C4",
+      "claim": "The 29-35% Parisi ultrametricity violation rate observed in computational studies of 8,000 Wheeler-DeWitt systems is a signature of the 'sharp sufficient condition' (diagonal Ĥ_CR) — and generic systems naturally approach this condition at late times due to decoherence selecting the diagonal basis.",
+      "formal_restatement": "For a Wheeler-DeWitt system with Hamiltonian Ĥ = Ĥ_C⊗𝕀_R + 𝕀_C⊗Ĥ_R + Ĥ_CR, where Ĥ_CR is initially non-diagonal in the Ĥ_C eigenbasis, the system evolves under the Wheeler-DeWitt constraint into a state where the effective clock-rest interaction becomes diagonal. Claim: the Parisi violation rate starts at 29-35% (generic) and asymptotically approaches 0% (diagonal limit) as the system evolves — i.e., ultrametricity is an ATTRACTOR of the dynamics, not a fine-tuned initial condition.",
+      "logical_coherence": "PARTIALLY_COHERENT — the computational result (29-35% violation for static generic systems) is well-established. But the dynamical claim (violation rate → 0% at late times) has NOT been computationally demonstrated. The 8,000-system study was of STATIC Hamiltonians, not dynamical evolution. The 'decoherence selects diagonal basis' argument is plausible (environment-induced decoherence generically selects the pointer basis, which is the eigenbasis of the system-environment interaction) but has not been tested in the specific WdW context.",
+      "empirical_content": "NONE — the dynamical claim is untested. The static result (29-35% violation) is computationally verified but does not distinguish this theory from any other. The assertion that 'ultrametricity is an attractor' is a prediction that has not been tested computationally, let alone experimentally.",
+      "llm_verifiability": "PARTIALLY_VERIFIABLE — an LLM could, in principle, implement a numerical simulation of the dynamical WdW system to test whether the Parisi violation rate asymptotically approaches 0%. However, this would require significant computational physics expertise and has not been done in the existing corpus.",
+      "verifiability_grade": "COHERENT_UNVERIFIABLE — [Human expert recommended: computational quantum physics]",
+      "critical_question_for_human": "Run a dynamical simulation of the WdW system with generic (non-diagonal) Ĥ_CR initial conditions and track the Parisi violation rate over time. Does it approach 0%? Over what timescale? If it does NOT approach 0%, the 'ultrametricity as attractor' claim is refuted on computational grounds alone — no experiment needed."
+    }
+  ],
+
+  "era_3_summary": {
+    "total_claims": 4,
+    "testable_experimentally": 1,
+    "testable_computationally": 2,
+    "coherent_but_untestable": 3,
+    "incoherent": 0,
+    "human_expert_required_for": 4,
+    "strongest_claim": "E3-C3 — the CMB log-periodic oscillation prediction is specific, testable, and has an experimental resolution window (by ~2035). If confirmed, it would provide the first empirical anchor for the entire hydrodynamic foundations program.",
+    "weakest_claim": "E3-C4 — the dynamical 'ultrametricity as attractor' claim is plausible but completely untested. It requires computational validation before any experimental consideration.",
+    "blind_spot": "All 4 claims are internally coherent. The problem is not logical contradiction — it's that 3 of 4 claims have ZERO empirical content (they reproduce standard QM predictions exactly). The hydrodynamic foundations program is mathematically elegant but observationally equivalent to standard QM in all currently testable domains. The CMB prediction (E3-C3) is the sole proposed empirical differentiator. If CMB-S4 returns a null result, Era 3 collapses to 'an interpretation among many with no empirical support.'"
+  },
+
+  "era_4_claims": [
+    {
+      "id": "E4-C1",
+      "claim": "The fundamental constants c, G, and ħ are unit-conversion artifacts, not fundamental properties of nature. They arise from our choice of units (meters, kilograms, seconds) rather than from physics. In natural units (c = G = ħ = 1), the apparent 'constants' disappear — what remains are pure dimensionless ratios.",
+      "formal_restatement": "In the system of natural units where c = G = ħ = 1, all dimensionful quantities are expressed in Planck units. The dimensionless Standard Model parameters (α ≈ 1/137, Yukawa couplings, CKM matrix elements, neutrino masses, θ_QCD) are the ONLY physically meaningful numbers. The claim: these dimensionless parameters are NOT free but are determined by π/φ geometric ratios. The 'constants' c, G, ħ are artifacts of the SI unit system — they encode the ratio between our arbitrary human-chosen units (meter, kilogram, second) and the natural Planck scale (ℓ_P, m_P, t_P).",
+      "logical_coherence": "COHERENT — the first part of the claim (c, G, ħ are unit-conversion artifacts) is a well-known and widely-accepted perspective in theoretical physics. Planck units are the natural system where c = G = ħ = 1. This is not controversial. The controversial part is the second claim: that the DIMENSIONLESS parameters are determined by π/φ geometry. This is the claim that matters.",
+      "empirical_content": "DEPENDS ON THE SECOND CLAIM — if the claim is merely 'c, G, ħ are unit choices,' it has zero empirical content (it's a tautology — any theory can be expressed in any unit system). If the claim extends to 'the dimensionless SM parameters are determined by π/φ,' then it HAS empirical content but has produced ZERO derivations to date.",
+      "llm_verifiability": "VERIFIABLE_COMPUTATIONALLY — an LLM can check whether any published derivation of a SM constant from π/φ geometry exists. As of 2026-07-15: none exist. The falsification register candidate CFPE-E4-C1 monitors this with earliest check 2035-12-31.",
+      "verifiability_grade": "COHERENT (first claim) + UNVERIFIED (second claim) — [Human expert for: is a π/φ geometric derivation even possible in principle?]",
+      "critical_question_for_human": "Is there any no-go theorem that forbids deriving the observed values of SM dimensionless parameters from pure geometry? Specifically: does the renormalization group flow (scale-dependence of couplings) impose a constraint that any geometric derivation must either reproduce the full RG flow or explain why a specific scale is geometrically privileged? If such a constraint exists, any geometric derivation faces a fundamental obstacle."
+    },
+    {
+      "id": "E4-C2",
+      "claim": "Physics is adelic — the real-number (Archimedean) description is the ∞-place projection of a richer ultrametric structure defined over p-adic completions of ℚ. Ostrowski's theorem is the hidden organizing principle behind quantum measurement, error correction, and spacetime.",
+      "formal_restatement": "Let A be the adele ring of ℚ (the restricted product of ℝ and all ℚ_p). There exists a physical theory T defined on A such that: (1) the restriction of T to the Archimedean place (ℝ-component) reproduces standard quantum mechanics and general relativity, (2) the restriction of T to a p-adic place (ℚ_p-component) describes error correction and measurement as operations in the Bruhat-Tits tree T_p, and (3) the full adelic theory T makes predictions beyond standard physics that are testable at the intersection of the Archimedean and p-adic 'places' — specifically, ZBW as the physical manifestation of the p-adic channel of the adelic Dirac equation.",
+      "logical_coherence": "COHERENT — the mathematical machinery (adele ring, restricted product, Bruhat-Tits buildings, p-adic completions) is well-defined. The claim is not mathematically contradictory. However, the mapping from mathematical structures to physical observables is asserted, not derived. The claim 'ZBW is the physical manifestation of the p-adic channel' is a proposed correspondence, not a proven equivalence.",
+      "empirical_content": "PROMISSORY — the grand synthesis paper lists 'falsifiable predictions' (ZBW current correlator as Z₂ topological invariant, p-adic anyon fusion rules, intrinsic QEC via Ostrowski) but provides ZERO experimental verification of any prediction. The predictions are stated as capabilities ('can be measured via spin noise spectroscopy') but have not been measured. The adelic framework is, as of 2026, a mathematical research program with no physical evidence.",
+      "llm_verifiability": "UNVERIFIABLE — an LLM cannot verify whether the adelic Dirac equation's p-adic channel manifests as ZBW. This requires: (a) computing the ZBW current correlator in the adelic formalism, (b) comparing to experimental measurements of ZBW (which have never been performed — ZBW has never been directly observed), (c) establishing that the observed signal is uniquely attributable to the p-adic channel rather than conventional QFT.",
+      "verifiability_grade": "COHERENT_UNVERIFIABLE — [Human expert required: mathematical physics, QFT, experimental condensed matter]",
+      "critical_question_for_human": "Does the adelic Dirac equation make ANY prediction that differs from the standard Dirac equation in a regime accessible to current or near-future experiment? If the answer is no, the adelic framework is unfalsifiable — it produces the same observables as standard physics with extra mathematical structure that has no empirical consequence."
+    },
+    {
+      "id": "E4-C3",
+      "claim": "The fine-structure constant α ≈ 1/137.036 can be reframed as the cross-ratio of two measurable electron length scales: α = r_e/λ_C. This reveals projective invariance in α and suggests that α is a geometric invariant of a deeper structure.",
+      "formal_restatement": "Define the classical electron radius r_e = e²/(4πε₀m_ec²) and the Compton wavelength λ_C = h/(m_ec). Then α = r_e/λ_C = CR(r_e, λ_C; 0, ∞), a cross-ratio on the projective line. The cross-ratio is invariant under all projective transformations (Möbius transformations) of the form x → (ax+b)/(cx+d). Therefore α is a projective invariant — any theory that predicts α must respect this projective structure.",
+      "logical_coherence": "COHERENT — the mathematical identity α = r_e/λ_C is correct and follows from the definitions of r_e and λ_C. The projective invariance of the cross-ratio is a standard mathematical result. The reframing is mathematically sound.",
+      "empirical_content": "NONE — the reframing is a mathematical identity, not a physical prediction. α = r_e/λ_C is true by definition (r_e = α·λ_C). The projective invariance is a property of the ratio, not a new physical law. The reframing does NOT derive α from anything — it expresses α as a ratio of two measured quantities (r_e and λ_C), both of which CONTAIN α in their definitions. The reframing is circular: α is expressed in terms of quantities that themselves depend on α.",
+      "llm_verifiability": "VERIFIED_AS_MATHEMATICALLY_CORRECT — the identity holds. But it has no empirical content beyond the original definition of α. The claim that this 'suggests a deeper geometric structure' is an interpretation, not a testable prediction.",
+      "verifiability_grade": "COHERENT_BUT_CIRCULAR — the cross-ratio reframing is mathematically correct but physically vacuous. [Human expert: confirm circularity analysis]",
+      "critical_question_for_human": "Can you express r_e and λ_C without using α in their definitions? If not, the cross-ratio reframing is circular — it expresses α in terms of quantities that are themselves functions of α. A non-circular geometric derivation would need to express α in terms of quantities that do NOT presuppose α — e.g., purely geometric quantities like π, φ, or topological invariants of manifolds."
+    }
+  ],
+
+  "era_4_summary": {
+    "total_claims": 3,
+    "testable_experimentally": 0,
+    "testable_computationally": 0,
+    "coherent_but_untestable": 3,
+    "incoherent": 0,
+    "circular": 1,
+    "human_expert_required_for": 3,
+    "strongest_claim": "E4-C1 (first part) — c, G, ħ as unit-conversion artifacts is a well-accepted perspective, not a controversial claim. The controversial extension (SM constants from π/φ) has no evidence.",
+    "weakest_claim": "E4-C3 — the cross-ratio reframing of α is mathematically correct but circular (r_e and λ_C are defined using α). It does not advance physical understanding.",
+    "blind_spot": "Era 4 has the most elegant mathematics and the least empirical content of any era. The adelic framework is a mathematical research program with zero physical predictions that differ from standard physics. The geometric constants program has a century of failure (Eddington 1929 → present) as its reference class. The reframings are mathematically interesting but physically vacuous — they express known quantities in new notation without generating new predictions."
+  },
+
+  "consolidated_human_review_requirements": {
+    "description": "The following items cannot be resolved by LLM analysis alone and require human expert review. These are the genuine scientific judgment calls that determine whether Eras 3 and 4 are viable research programs or mathematical dead ends.",
+    "urgent": [
+      {
+        "id": "HUMAN-1",
+        "claim": "E3-C1: Existence of a deterministic dynamical system Φ_t on a non-simply-connected manifold that reproduces all QM predictions",
+        "expertise": "Theoretical physics, quantum foundations, dynamical systems",
+        "question": "Is the explicit construction of Φ_t provably impossible given known constraints (no-signaling, Hilbert space structure, Gleason's theorem)?",
+        "impact_if_refuted": "Era 3 collapses — the entire hydrodynamic foundations claim is predicated on the existence of Φ_t"
+      },
+      {
+        "id": "HUMAN-2",
+        "claim": "E3-C2: Physical realizability of diagonal Ĥ_CR condition",
+        "expertise": "Mathematical physics, quantum gravity",
+        "question": "Does any known physical system (even idealized) satisfy the diagonal Ĥ_CR condition?",
+        "impact_if_refuted": "The Bridge Theorem becomes mathematically interesting but physically vacuous"
+      },
+      {
+        "id": "HUMAN-3",
+        "claim": "E4-C2: Adelic Dirac equation makes unique physical predictions",
+        "expertise": "Mathematical physics, QFT, experimental physics",
+        "question": "Compute at least one observable that the adelic Dirac equation predicts differently from the standard Dirac equation in a currently accessible experimental regime.",
+        "impact_if_refuted": "The adelic framework is unfalsifiable — it produces standard physics plus extra mathematical structure with no empirical consequence"
+      },
+      {
+        "id": "HUMAN-4",
+        "claim": "E4-C1: SM constants from π/φ geometry",
+        "expertise": "Theoretical physics, mathematical physics",
+        "question": "Is there a no-go theorem (from renormalization group flow) that forbids a purely geometric derivation of running couplings?",
+        "impact_if_refuted": "The geometric constants program faces a fundamental obstacle from QFT itself"
+      }
+    ],
+    "non_urgent": [
+      {
+        "id": "HUMAN-5",
+        "claim": "E3-C4: Ultrametricity as dynamical attractor",
+        "expertise": "Computational quantum physics",
+        "question": "Does a numerical simulation of the dynamical WdW system show Parisi violation rate → 0% at late times?",
+        "llm_note": "This could potentially be LLM-executed with a sufficiently sophisticated computational physics implementation. Flagging as human-expert-recommended rather than required."
+      }
+    ]
+  },
+
+  "final_verdict": {
+    "era_3": "Mathematically coherent, physically untestable in all currently accessible domains except the CMB prediction (E3-C3). The hydrodynamic foundations program is a legitimate theoretical physics research program — it makes specific, falsifiable predictions (CMB oscillations) and operates within established mathematical frameworks (Page-Wootters, Wheeler-DeWitt, Bruhat-Tits). Its weakness is not logical incoherence but empirical emptiness: until CMB-S4 returns results (~2035), the program has exactly ONE empirical anchor, and if that anchor fails, the program collapses.",
+    "era_4": "Mathematically coherent but empirically empty. The adelic framework and geometric constants program have produced elegant mathematics with zero physical predictions distinguishable from standard physics. The cross-ratio reframing of α is circular. The 'constants from π/φ' claim has a century of failure as its reference class. Era 4 is the weakest link in the CFPE cascade — not because it's logically contradictory, but because it makes no contact with experiment. This is reflected in the refined Bayesian model: P(E4_Opt) = 0.129, the lowest of any era.",
+    "actionability": "The CMB prediction (E3-C3) is the single most important empirical anchor in the entire CFPE cascade. If CMB-S4 detects log-periodic oscillations, Eras 3 and 4 gain significant credibility. If CMB-S4 returns a null result, both eras collapse to 'mathematically interesting but physically irrelevant.' The entire CFPE forecast should be anchored to the CMB-S4 result — it is the nearest-term, highest-impact empirical resolution across all 4 eras."
+  }
+}

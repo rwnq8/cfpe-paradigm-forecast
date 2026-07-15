@@ -65,4 +65,20 @@ Rowan Brad Quni-Gudzinas — ORCID: 0009-0002-4317-5604
 
 ---
 
-*Generated: 2026-07-15 | deep-research pipeline + research-planner v5.0*
+## Persistent Locations
+
+| Platform | URL / Path |
+|:---------|:-----------|
+| **Zenodo** | [10.5281/zenodo.21384055](https://zenodo.org/records/21384055) |
+| **GitHub** | [rwnq8/cfpe-paradigm-forecast](https://github.com/rwnq8/cfpe-paradigm-forecast) |
+| **R2** | `qnfo/projects/cfpe-paradigm-forecast/` |
+| **Pages Dashboard** | [cfpe-dashboard.pages.dev](https://cfpe-dashboard.pages.dev) |
+
+## Run Verification Pipeline
+
+```bash
+python cfpe_verify.py --schedule    # Show quarterly schedule
+python cfpe_verify.py               # Full arXiv verification (5 candidates)
+```
+
+*Generated: 2026-07-15 | DOI: 10.5281/zenodo.21384055 | deep-research pipeline + research-planner v5.0*

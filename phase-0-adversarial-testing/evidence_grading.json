@@ -1,0 +1,199 @@
+{
+  "forecast": "QNFO 100-Year Paradigm Forecast (CFPE v1.0)",
+  "grading_date": "2026-07-15",
+  "grading_scale": {
+    "DIRECT_EXPERIMENT": {"score": 4, "definition": "Contains actual experimental data, measurements, or observations that directly support a QNFO forecast claim"},
+    "INDIRECT_INFERENCE": {"score": 3, "definition": "Reports experimental data supporting a related claim from which the QNFO claim can be inferred, or contains computational simulations with physically realistic parameters"},
+    "THEORETICAL_ARGUMENT": {"score": 2, "definition": "Makes a mathematical or logical argument supporting the QNFO claim but provides no empirical data"},
+    "SPECULATIVE_EXTRAPOLATION": {"score": 1, "definition": "Makes claims beyond what can be supported by evidence presented, or proposes ideas without empirical or computational verification"}
+  },
+  "papers": [
+    {
+      "slug": "ultrametric-quantum",
+      "title": "Qudit Quantum Error Correction",
+      "era": "Era 1 (2026–2036): FCI/Topological QC",
+      "grade": "THEORETICAL_ARGUMENT",
+      "score": 2,
+      "rationale": "Numerical simulations of tree-topology vs grid-topology codes. No experimental FCI device data. Claims about manufacturability (7-ary tree, 343 qubits) are unverified. The 'native ultrametric tree structure' argument is mathematical, not empirical."
+    },
+    {
+      "slug": "reassessing-the-foundations-of-quantum-computation",
+      "title": "Ultrametric Quantum Computation and the Langlands Program",
+      "era": "Era 1 (2026–2036): FCI/Topological QC",
+      "grade": "THEORETICAL_ARGUMENT",
+      "score": 2,
+      "rationale": "Mathematical argument connecting ultrametric geometry (Bruhat-Tits trees) to quantum error correction. Diagnoses 'two walls' (decoherence, anyon) persuasively but provides no experimental validation of ultrametric QEC. Purely theoretical framework."
+    },
+    {
+      "slug": "paper-physics-of-computation",
+      "title": "The Physics of Computation: Fundamental Limits",
+      "era": "Era 1 (2026–2036): Thermal Wall Evidence",
+      "grade": "THEORETICAL_ARGUMENT",
+      "score": 2,
+      "rationale": "Reviews established physical limits (Landauer, Margolus-Levitin, Bremermann) and applies them to QC thermal analysis. Well-reasoned theoretical estimate of QEC overhead (10²–10³×), but the thermal runaway calculation uses modeled parameters, not measured device data."
+    },
+    {
+      "slug": "paper-the-qubit-delusion",
+      "title": "The Qubit Delusion: How Particle Ontology Sabotaged Quantum Computing",
+      "era": "Era 1 (2026–2036): Institutional/Industry Evidence",
+      "grade": "INDIRECT_INFERENCE",
+      "score": 3,
+      "rationale": "Contains empirical forensics: reproducibility scorecard of 20 milestone claims, bubble-morphology analysis comparing QC to historical technology bubbles (railway, dot-com, crypto), and press-release-vs-preprint claim-gap analysis. Uses actual market and publication data. Supports the institutional/industry critique but does not validate FCI hardware claims."
+    },
+    {
+      "slug": "psii-quantum-coherence",
+      "title": "Quantum Coherence in Photosystem II: Environment-Assisted Transport",
+      "era": "Era 2 (2036–2046): Bio-spintronics",
+      "grade": "INDIRECT_INFERENCE",
+      "score": 3,
+      "rationale": "Reviews confirmed experimental evidence: quantum beating in FMO complex (Engel 2007), coherence at physiological temperatures, near-unity quantum efficiency. These are published experimental results. However, coherence is femtosecond-to-picosecond (not millisecond), in light-harvesting (not spin-based computation), and no gate operation is demonstrated. Supports the *possibility* of biological quantum effects but does not validate the √SWAP gate."
+    },
+    {
+      "slug": "cryptochrome-magnetoreception",
+      "title": "Cryptochrome Magnetoreception: The Radical Pair Mechanism",
+      "era": "Era 2 (2036–2046): Bio-spintronics",
+      "grade": "INDIRECT_INFERENCE",
+      "score": 3,
+      "rationale": "Reviews extensive experimental evidence: behavioral experiments in migratory birds (Wiltschko 1972, confirmed in multiple labs), biochemical characterization of cryptochrome photocycle, magnetic field effects on radical pair yields. The radical-pair mechanism at ~50 μT is experimentally confirmed. However, spin coherence lifetimes are inferred, not directly measured, and no gate operation exists."
+    },
+    {
+      "slug": "log-periodic-oscillations-in-the-cmb",
+      "title": "Log-Periodic Oscillations in the CMB",
+      "era": "Era 3 (2046–2076): Superdeterminism/CMB",
+      "grade": "THEORETICAL_ARGUMENT",
+      "score": 2,
+      "rationale": "Proposes a specific, well-defined search protocol for log-periodic CMB oscillations predicted by STC. Includes explicit functional form, three-step analysis protocol, and falsification criterion. However, this is a proposal to CMB-S4/Simons Observatory, not an experimental result. No data analysis has been performed. The theoretical prediction is specific but unverified."
+    },
+    {
+      "slug": "conditional-state-distances-pw-clocks",
+      "title": "Conditional State Distances in Page-Wootters Quantum Clocks",
+      "era": "Era 3 (2046–2076): Hydrodynamic Foundations",
+      "grade": "THEORETICAL_ARGUMENT",
+      "score": 2,
+      "rationale": "Computational exploration of 8,000 Wheeler-DeWitt systems establishing that generic clock-rest interactions produce 29-35% ultrametricity violation. Rigorous methodology with clear findings. Nears INDIRECT INFERENCE territory due to statistical robustness, but remains theoretical — no physical system was measured. The 'sharp sufficient condition' (diagonal H_CR) is a mathematical result."
+    },
+    {
+      "slug": "bridge-theorem",
+      "title": "The Bridge Theorem: Connecting p-adic and Bruhat-Tits Geometries",
+      "era": "Era 3 (2046–2076): Hydrodynamic Foundations",
+      "grade": "THEORETICAL_ARGUMENT",
+      "score": 2,
+      "rationale": "Formal proof sketch establishing that conditional quantum states under Wheeler-DeWitt constraint organize into ultrametric hierarchies. Purely mathematical — no experimental validation. The theorem is stated as a proof sketch (v1.0), not a fully peer-reviewed result."
+    },
+    {
+      "slug": "fine-structure-constant-cross-ratio",
+      "title": "Fine-Structure Constant as a Cross-Ratio",
+      "era": "Era 4 (2076–2126+): SM Constants from Geometry",
+      "grade": "THEORETICAL_ARGUMENT",
+      "score": 2,
+      "rationale": "Reframes α as cross-ratio of electron length scales — a geometric reinterpretation, not a derivation from first principles. The paper does NOT derive α ≈ 1/137.036 from π/φ; it merely notes that α = r_e/λ_C (a ratio of two measured quantities). The adelic extension (§7.7) is purely formal. The connection to π/φ geometry is asserted, not demonstrated."
+    },
+    {
+      "slug": "adelic-synthesis-pattern-particle",
+      "title": "Adelic Synthesis: The Pattern-Particle Correspondence",
+      "era": "Era 4 (2076–2126+): Adelic Physics Program",
+      "grade": "SPECULATIVE_EXTRAPOLATION",
+      "score": 1,
+      "rationale": "Constructs adelic braid groups, Temperley-Lieb algebras, and fusion categories — purely mathematical constructions with zero physical validation. Claims about 'Adelic Topological Quantum Computation' eliminating Solovay-Kitaev overhead are speculative extensions of unverified mathematical formalism. No experimental test proposed."
+    },
+    {
+      "slug": "zbw-majorana-tqc-p7-grand-synthesis",
+      "title": "The Adelic Physics Program: A Grand Synthesis",
+      "era": "Era 4 (2076–2126+): Adelic Physics Program",
+      "grade": "SPECULATIVE_EXTRAPOLATION",
+      "score": 1,
+      "rationale": "Synthesizes 6 theoretical papers into a 'grand' framework claiming physics 'is adelic.' The central thesis — that quantum mechanics is the ∞-place projection of an adelic theory — is a metaphysical claim, not a physical one. Lists 'falsifiable predictions' but provides zero experimental verification of any claim. The synthesis is programmatic, not evidentiary."
+    },
+    {
+      "slug": "ultrametric-quantum-gravity-and-computation",
+      "title": "Ultrametric Quantum Gravity and Computation",
+      "era": "Era 3/Era 4 (Cross-cutting)",
+      "grade": "SPECULATIVE_EXTRAPOLATION",
+      "score": 1,
+      "rationale": "Unified framework claiming 'reality is a timeless, branching fractal' and 'quantum computation is navigation of this fractal.' The Wheeler-DeWitt connection is asserted without derivation. The claim that the 'same geometry' resolves both fault-tolerance and the problem of time is elegant but provides no experimental or computational evidence. The Executive Summary reads as metaphysical speculation, not physical theory."
+    },
+    {
+      "slug": "paper-manifesto-honest-computation",
+      "title": "Manifesto for Honest Computation",
+      "era": "Era 1 (Cross-cutting: Policy/Strategy)",
+      "grade": "THEORETICAL_ARGUMENT",
+      "score": 2,
+      "rationale": "Synthesis paper proposing 5 principles for honest computation and resource reallocation. The argument is policy-oriented and principled, but contains no new experimental data. The 'Falsification Pledge' proposal is institutional, not scientific."
+    },
+    {
+      "slug": "paper-problem-substrate-mapping",
+      "title": "The Problem-Substrate Mapping: A Framework for Honest Computational Investment",
+      "era": "Era 1 (Cross-cutting: Strategy)",
+      "grade": "THEORETICAL_ARGUMENT",
+      "score": 2,
+      "rationale": "Conceptual framework for matching computational problems to physical substrates. Theoretical analysis of investment patterns. No experimental validation of the mapping framework itself."
+    }
+  ],
+  "grade_distribution": {
+    "DIRECT_EXPERIMENT": {"count": 0, "percentage": 0.0},
+    "INDIRECT_INFERENCE": {"count": 3, "percentage": 20.0},
+    "THEORETICAL_ARGUMENT": {"count": 9, "percentage": 60.0},
+    "SPECULATIVE_EXTRAPOLATION": {"count": 3, "percentage": 20.0}
+  },
+  "era_evidence_summary": {
+    "Era_1": {
+      "papers_graded": 6,
+      "DIRECT_count": 0,
+      "INDIRECT_count": 1,
+      "THEORETICAL_count": 4,
+      "SPECULATIVE_count": 1,
+      "strongest_evidence": "qubit-delusion (INDIRECT INFERENCE: QC industry forensic data)",
+      "weakness": "Zero DIRECT experimental data on FCI coherence, thermal protection, or ultrametric QEC thresholds"
+    },
+    "Era_2": {
+      "papers_graded": 2,
+      "DIRECT_count": 0,
+      "INDIRECT_count": 2,
+      "THEORETICAL_count": 0,
+      "SPECULATIVE_count": 0,
+      "strongest_evidence": "Experimental confirmation of radical-pair mechanism in cryptochrome + quantum coherence in PSII at physiological temperatures",
+      "weakness": "Coherence times are femtosecond-to-picosecond (not millisecond); zero gate operations demonstrated; no synthetic biomimetic channel data"
+    },
+    "Era_3": {
+      "papers_graded": 4,
+      "DIRECT_count": 0,
+      "INDIRECT_count": 0,
+      "THEORETICAL_count": 3,
+      "SPECULATIVE_count": 1,
+      "strongest_evidence": "Conditional-state-distances-pw-clocks (8,000-system computational exploration with statistical rigor)",
+      "weakness": "ZERO experimental or observational data. The hydrodynamic foundations thesis has no empirical anchor."
+    },
+    "Era_4": {
+      "papers_graded": 3,
+      "DIRECT_count": 0,
+      "INDIRECT_count": 0,
+      "THEORETICAL_count": 1,
+      "SPECULATIVE_count": 2,
+      "strongest_evidence": "fine-structure-constant-cross-ratio (geometric reframing, but does not derive α from π/φ)",
+      "weakness": "ZERO experimental data. The π/φ geometry thesis for SM constants is asserted, not demonstrated. The adelic synthesis is pure mathematical formalism."
+    }
+  },
+  "cascade_ev_impact": {
+    "original_cascade_ev": 13.5,
+    "methodology": "Recompute cascade EV using ONLY papers graded DIRECT_EXPERIMENT (4) or INDIRECT_INFERENCE (3). Papers scored 1-2 are excluded from evidence weighting. Era probabilities are multiplied by evidence-coverage ratio (graded_papers_with_empirical_support / total_papers_graded).",
+    "evidence_coverage_by_era": {
+      "Era_1": 1.0,
+      "Era_2": 1.0,
+      "Era_3": 0.0,
+      "Era_4": 0.0
+    },
+    "revised_era_probabilities": {
+      "Era_1_optimistic": {"original": 0.25, "evidence_multiplier": 0.167, "revised": 0.042},
+      "Era_1_baseline": {"original": 0.60, "evidence_multiplier": 0.167, "revised": 0.100},
+      "Era_2_optimistic": {"original": 0.338, "evidence_multiplier": 1.0, "revised": 0.338},
+      "Era_2_baseline": {"original": 0.455, "evidence_multiplier": 1.0, "revised": 0.455},
+      "Era_3_optimistic": {"original": 0.383, "evidence_multiplier": 0.0, "revised": 0.0},
+      "Era_3_baseline": {"original": 0.281, "evidence_multiplier": 0.0, "revised": 0.0},
+      "Era_4_optimistic": {"original": 0.310, "evidence_multiplier": 0.0, "revised": 0.0},
+      "Era_4_baseline": {"original": 0.173, "evidence_multiplier": 0.0, "revised": 0.0}
+    },
+    "revised_cascade_ev_estimate": "< 2.0",
+    "rationale": "Eras 3 and 4 have ZERO empirical evidence support (no DIRECT or INDIRECT paper). Era 1 has only 1 INDIRECT paper out of 6 total (the qubit-delusion forensics, which provides industry data but no FCI hardware validation). The only era with any empirical grounding is Era 2 (2 INDIRECT papers on biological quantum effects). When the cascade model is restricted to empirically-grounded evidence, the entire pipeline from Era 2→3→4 collapses because the conditional dependencies have no empirical foundation.",
+    "caveat": "This is a lower-bound estimate using exclusively empirical evidence. The CFPE forecast's value is partially in its theoretical framework — a purely evidence-restricted cascade may be too conservative. This estimate is a stress-test, not a replacement for the original model."
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "title": "CFPE Fault-Tree Decomposition: Era 1 (2026-2036)",
+  "date": "2026-07-15",
+  "methodology": "Each macro-candidate is decomposed into a fault tree — a hierarchical AND/OR gate structure where leaf nodes are independently testable predictions with specific check dates within 1-3 years. AND gates mean ALL sub-events must succeed; OR gates mean ANY sub-event failure kills the candidate. The goal is maximum independent testability: every leaf should be verifiable via arXiv, Semantic Scholar, or public announcements without laboratory access.",
+  "era_1_candidates": [
+    {
+      "candidate_id": "E1-A",
+      "name": "FCI Braiding Achieves Intrinsic Fault Tolerance",
+      "type": "Optimistic",
+      "probability": 0.25,
+      "description": "Fractional Chern insulator braiding interferometry provides passive topological error protection via Bruhat-Tits tree topology. Logical qubits operate at T > 1K with T₂* > 1ms. Traditional active QEC becomes unnecessary for this substrate.",
+      "gate_type": "AND",
+      "gate_note": "ALL leaf nodes must succeed for this candidate to materialize",
+      "leaves": [
+        {
+          "id": "E1-A-L1",
+          "description": "FCI heterostructure synthesized with layer precision < 1 nanometer at wafer scale (>1 cm²) in at least two independent labs",
+          "check_date": "2028-06-30",
+          "check_method": "arXiv search: 'fractional Chern insulator' AND ('synthesis' OR 'fabrication' OR 'heterostructure') AND ('wafer' OR 'large area') → verify at least 2 independent groups report wafer-scale FCI",
+          "current_status": "unverified",
+          "null_hypothesis": "FCI remains a small-sample (<100 μm²) laboratory curiosity — no wafer-scale fabrication exists"
+        },
+        {
+          "id": "E1-A-L2",
+          "description": "Non-abelian anyon statistics confirmed at ν=5/2 (or equivalent filling) in an FCI system via anyon interferometry with >3σ significance",
+          "check_date": "2029-06-30",
+          "check_method": "arXiv search: 'non-abelian' AND ('fractional Chern insulator' OR 'FCI') AND ('interferometry' OR 'braiding') → extract statistical significance of anyonic braiding claims",
+          "current_status": "unverified",
+          "null_hypothesis": "Non-abelian anyons remain unconfirmed in any FCI system — only abelian statistics observed"
+        },
+        {
+          "id": "E1-A-L3",
+          "description": "Braiding interferometry demonstrated with gate fidelity > 99% (single-braid error < 1%) in at least one peer-reviewed publication",
+          "check_date": "2029-12-31",
+          "check_method": "arXiv search: 'FCI' AND ('braiding fidelity' OR 'gate fidelity' OR 'interferometry fidelity') → extract best reported fidelity",
+          "current_status": "unverified",
+          "null_hypothesis": "Braiding fidelity in FCI systems remains below 90% — far from fault-tolerance thresholds"
+        },
+        {
+          "id": "E1-A-L4",
+          "description": "Qubit coherence time T₂* > 1 millisecond demonstrated at operating temperature T > 1 Kelvin in a published experiment",
+          "check_date": "2028-12-31",
+          "check_method": "arXiv search: 'fractional Chern insulator' AND ('coherence' OR 'dephasing' OR 'T2') AND ('kelvin' OR 'temperature') → extract T₂* and temperature",
+          "current_status": "PRELIMINARY_HOLDS (2026-07-15): zero FCI coherence data at T > 1K",
+          "null_hypothesis": "FCI coherence degrades rapidly above 100 mK — the 'thermal protection' claimed by BT tree topology has no experimental evidence"
+        },
+        {
+          "id": "E1-A-L5",
+          "description": "Logical error rate measured below surface code threshold (pL < 10⁻³ per logical operation) with passive protection only (no active correction cycles)",
+          "check_date": "2030-12-31",
+          "check_method": "arXiv search: 'FCI' AND ('logical error rate' OR 'error threshold') AND ('passive' OR 'topological protection') → extract best reported logical error rate under passive-only protection",
+          "current_status": "unverified",
+          "null_hypothesis": "FCI logical error rates exceed 10⁻² even with passive protection — surface codes remain superior"
+        },
+        {
+          "id": "E1-A-L6",
+          "description": "Scalable architecture demonstrated: >100 logical qubits on a single FCI substrate, with cross-talk error < 0.1% between adjacent qubits",
+          "check_date": "2032-12-31",
+          "check_method": "Monitor Nature/Science/PRL for FCI scaling results. Check: qubit count, crosstalk, fabrication yield",
+          "current_status": "unverified",
+          "null_hypothesis": "FCI scaling stalls below 10 logical qubits due to fabrication yield and crosstalk"
+        },
+        {
+          "id": "E1-A-L7",
+          "description": "Bruhat-Tits tree topology demonstrated to provide measurable (>2×) error confinement advantage over equivalent flat/2D encodings in computational simulation or physical experiment",
+          "check_date": "2029-06-30",
+          "check_method": "arXiv search: 'Bruhat-Tits' OR 'ultrametric' AND ('error correction' OR 'error confinement') AND ('simulation' OR 'experiment') → extract reported improvement factor over flat codes",
+          "current_status": "unverified",
+          "null_hypothesis": "The BT tree topology's error-confinement advantage is purely theoretical — no experiment or simulation demonstrates a measurable improvement"
+        }
+      ],
+      "kill_conditions": [
+        {"condition": "Any single leaf node definitively falsified → candidate KILLED (AND gate: all must succeed)", "trigger": "Any leaf check_date passes with null hypothesis confirmed"}
+      ]
+    },
+    {
+      "candidate_id": "E1-B",
+      "name": "Gate-Based QC Scales Incrementally (Continuity Baseline)",
+      "type": "Baseline",
+      "probability": 0.60,
+      "description": "Active QEC manages thermal load. Surface codes improve. Qubit counts increase ~10× per 3-4 years. 10k+ physical qubits by 2036. No paradigm shift. This is the null hypothesis for Era 1.",
+      "gate_type": "OR",
+      "gate_note": "ANY leaf node success is sufficient to sustain the continuity baseline. The candidate fails only if ALL leaves are falsified.",
+      "leaves": [
+        {
+          "id": "E1-B-L1",
+          "description": "At least one gate-based quantum processor scales past 1,000 physical qubits with two-qubit gate fidelity > 99.5% by end of 2027",
+          "check_date": "2027-12-31",
+          "check_method": "Monitor Google/IBM/Quantinuum/IonQ public announcements. Check: qubit count, gate fidelity, operational uptime.",
+          "current_status": "unverified",
+          "null_hypothesis": "Gate-based QC stalls below 500 high-fidelity qubits — scaling hits a physical ceiling earlier than roadmaps predict"
+        },
+        {
+          "id": "E1-B-L2",
+          "description": "Surface code logical error rate improves by >2× (relative to 2024 baseline) in at least one published experiment by end of 2028",
+          "check_date": "2028-12-31",
+          "check_method": "arXiv search: 'surface code' AND ('logical error rate' OR 'error suppression') AND ('improvement' OR 'scaling') → compare to 2024 baseline (Google Willow: ~10⁻³ per cycle)",
+          "current_status": "unverified",
+          "null_hypothesis": "Surface code error rates plateau — diminishing returns from code distance increases"
+        },
+        {
+          "id": "E1-B-L3",
+          "description": "No major QC company or national lab announces pivot away from gate-based architecture toward purely topological/passive approaches by end of 2029",
+          "check_date": "2029-12-31",
+          "check_method": "Monitor press releases from Google Quantum AI, IBM Quantum, Quantinuum, IonQ, QuEra, PsiQuantum, and major national labs. Flag any announcement abandoning gate-based for topological-only.",
+          "current_status": "holds (2026-07-15)",
+          "null_hypothesis": "At least one major player pivots away from gate-based QC — signaling loss of confidence in the active-QEC paradigm"
+        },
+        {
+          "id": "E1-B-L4",
+          "description": "Dilution refrigerator cooling capacity scales to support >5,000 qubits without thermal runaway in at least one operational system by end of 2030",
+          "check_date": "2030-12-31",
+          "check_method": "Monitor cryogenic engineering literature + QC company technical blogs for cooling capacity milestones. Key metric: qubits per watt at base temperature.",
+          "current_status": "unverified",
+          "null_hypothesis": "Thermal management becomes the binding constraint, not qubit fidelity — the 'thermodynamic wall' is real"
+        },
+        {
+          "id": "E1-B-L5",
+          "description": "At least one commercially-relevant quantum computation (pharma, materials, finance) performed on a gate-based processor with verified advantage over classical HPC by end of 2032",
+          "check_date": "2032-12-31",
+          "check_method": "Monitor Nature/Science for first verified quantum advantage on commercially relevant problem. Distinguish from random circuit sampling (Sycamore 2019).",
+          "current_status": "unverified",
+          "null_hypothesis": "No commercially-relevant quantum advantage demonstrated — the 'quantum utility' era never arrives"
+        }
+      ],
+      "kill_conditions": [
+        {"condition": "ALL 5 leaf nodes falsified → baseline CANDIDATE KILLED (OR gate: any success sustains it)", "trigger": "All leaves definitively fail by their check dates"}
+      ]
+    },
+    {
+      "candidate_id": "E1-C",
+      "name": "Material Impurities Pin Anyonic States — FCI Thermal Protection Fails",
+      "type": "Pessimistic",
+      "probability": 0.15,
+      "description": "FCI fabrication proves impossible at scale. Material impurities (charge puddles, lattice defects, edge roughness) pin anyonic states, destroying mobility and braiding statistics. The gap between mK experimental conditions and practical operating temperatures proves unbridgeable.",
+      "gate_type": "OR",
+      "gate_note": "This is a pessimistic scenario — ANY one of the following failure modes materializing confirms the pessimistic trajectory",
+      "leaves": [
+        {
+          "id": "E1-C-L1",
+          "description": "Charge disorder in FCI heterostructures measured at >10¹⁰ cm⁻² in at least two independent experimental characterizations — well above the threshold for anyonic mobility",
+          "check_date": "2028-06-30",
+          "check_method": "arXiv search: 'FCI' AND ('disorder' OR 'impurity' OR 'charge puddle') AND ('mobility' OR 'transport') → extract measured disorder densities",
+          "current_status": "unverified",
+          "null_hypothesis": "Disorder in FCI remains manageable — charge puddle density stays below 10⁹ cm⁻²"
+        },
+        {
+          "id": "E1-C-L2",
+          "description": "Anyonic braiding statistics fail to replicate across >50% of fabricated FCI devices in any single lab (device-to-device variability > 50%)",
+          "check_date": "2029-12-31",
+          "check_method": "arXiv search: 'FCI' AND ('yield' OR 'variability' OR 'device-to-device') → extract fabrication yield statistics",
+          "current_status": "unverified",
+          "null_hypothesis": "FCI device yield is adequate — >80% of devices show consistent anyonic behavior"
+        },
+        {
+          "id": "E1-C-L3",
+          "description": "Maximum FCI coherence temperature plateaus below 500 mK across all published experiments through 2029 — no progress beyond 2024 baselines",
+          "check_date": "2029-12-31",
+          "check_method": "arXiv search: 'FCI' AND ('temperature' OR 'millikelvin') AND ('coherence' OR 'dephasing') → plot maximum operating temperature vs publication year → test for plateau",
+          "current_status": "unverified",
+          "null_hypothesis": "FCI operating temperatures increase steadily — no plateau, progress continues"
+        },
+        {
+          "id": "E1-C-L4",
+          "description": "At least one high-profile FCI experiment retracted or fails replication in an independent lab by 2028",
+          "check_date": "2028-12-31",
+          "check_method": "Monitor Retraction Watch + Nature/Science corrections. Search arXiv for 'failed replication' AND 'fractional Chern insulator'",
+          "current_status": "unverified",
+          "null_hypothesis": "All published FCI results are robust and replicable"
+        }
+      ],
+      "kill_conditions": [
+        {"condition": "If ALL 4 pessimistic leaves FAIL to materialize by their check dates → optimistic trajectory confirmed, pessimistic CANDIDATE KILLED", "trigger": "All leaves falsified (i.e., FCI fabrication succeeds, coherence temperatures improve, etc.)"}
+      ]
+    }
+  ],
+  "summary_statistics": {
+    "total_macro_candidates": 3,
+    "total_leaf_nodes": 16,
+    "AND_gate_candidates": 1,
+    "OR_gate_candidates": 2,
+    "leaves_checkable_within_1_year": 2,
+    "leaves_checkable_within_2_years": 6,
+    "leaves_checkable_within_3_years": 8,
+    "earliest_check_date": "2027-12-31",
+    "latest_check_date": "2032-12-31",
+    "already_verified_leaves": 1
+  },
+  "independent_testability_analysis": {
+    "score": "87.5%",
+    "calculation": "14 of 16 leaf nodes are independently testable via arXiv/Semantic Scholar/web search. 2 leaves (E1-B-L3, E1-C-L4) require monitoring of non-academic sources (press releases, Retraction Watch) but remain LLM-verifiable.",
+    "interpretation": "Excellent decomposability — Era 1's macro-candidates decompose into high-resolution, independently testable predictions. The fault-tree structure reveals that the optimistic candidate (E1-A) is significantly more fragile than the others (7 AND-gated leaves must ALL succeed vs 4-5 OR-gated leaves for E1-B/E1-C where any ONE failure confirms the pessimistic scenario)."
+  }
+}

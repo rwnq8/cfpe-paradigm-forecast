@@ -1,0 +1,108 @@
+{
+  "red_team_comparison": {
+    "title": "Adversarial Re-Red-Team: Fresh vs Original Red-Team Comparison",
+    "date": "2026-07-15",
+    "methodology": "4 parallel explorer subagents, each tasked with finding the single strongest counterargument for one era, with NO knowledge of prior red-team verdicts or fixes. Compare survival rates against the original CFPE red-team from the worked example.",
+    "results": [
+      {
+        "era": "Era 1 (2026-2036)",
+        "claim": "FCI braiding interferometry provides intrinsic fault tolerance via Bruhat-Tits tree topology",
+        "original_red_team": {
+          "question": "Phonons can bridge the FCI energy gap — your passive protection is an illusion.",
+          "verdict": "WOUNDED → SURVIVED",
+          "fix_applied": "Acoustic impedance matching layers using alternating heavy/light atomic layers"
+        },
+        "fresh_adversary": {
+          "strongest_counterargument": "Bruhat-Tits trees are mathematical constructs in p-adic geometry, not physical features of FCI systems. FCIs exist in real 2D lattices with ordinary Euclidean geometry. There is no known physical mechanism by which a p-adic metric emerges from or replaces the Euclidean spatial metric in which anyons actually move. You cannot superimpose a BT tree onto a physical FCI system — the braiding statistics are determined by the topological order of the ground state (modular tensor category / Chern-Simons theory), which has no intrinsic ultrametric structure.",
+          "verdict": "WOUNDED",
+          "fix_applied": "NONE — adversary did not propose or accept a fix"
+        },
+        "divergence_analysis": "The fresh adversary attacks at a DEEPER level than the original — not on thermal engineering (phonon bridging), but on the fundamental physical realizability of the geometry itself. This is a more severe challenge: the original fix (acoustic layers) addresses a thermal problem while the fresh adversary questions whether the entire mathematical framework can be instantiated in a physical system. Both verdicts agree on WOUNDED, but the fresh adversary refused to move to SURVIVED."
+      },
+      {
+        "era": "Era 2 (2036-2046)",
+        "claim": "Controllable √SWAP radical-pair gate at room temperature via zwitterionic polymer networks",
+        "original_red_team": {
+          "question": "High-frequency compute ops generate fluid turbulence — your low-viscosity channels collapse.",
+          "verdict": "WOUNDED → SURVIVED",
+          "fix_applied": "Zwitterionic self-stabilizing polymer network to suppress turbulence"
+        },
+        "fresh_adversary": {
+          "strongest_counterargument": "Passive coherence ≠ active gate manipulation. Biological systems demonstrate passive quantum coherence (femtosecond-picosecond timescales in PSII, ~1-100 µs in cryptochrome). But a √SWAP gate requires ACTIVE modulation of the exchange interaction J(t) with high precision while maintaining coherence. Introducing external control fields (magnetic field gradients, microwave pulses) to implement gate operations inevitably introduces decoherence channels that destroy the very coherence the biological system provides. The gap between 'this system supports quantum coherence' and 'this system supports computational gate operations' is a categorical leap, not an incremental engineering challenge.",
+          "verdict": "WOUNDED",
+          "fix_applied": "NONE — categorical gap identified, not an engineering problem"
+        },
+        "divergence_analysis": "The original red-team focused on fluid dynamics (turbulence), which is an engineering problem solvable via polymer chemistry. The fresh adversary identifies a categorical gap: biological coherence is a measurement/witness phenomenon, not a control/computation phenomenon. This is a harder problem because it's not about materials — it's about the fundamental distinction between observing quantum effects and manipulating them. The fix trajectory is unclear — no polymer network bridges the witness→gate gap."
+      },
+      {
+        "era": "Era 3 (2046-2076)",
+        "claim": "Wavefunction collapse is a mathematical artifact; quantum mechanics reformulated as classical, deterministic, hydrodynamic theory",
+        "original_red_team": {
+          "question": "Bell's Theorem forbids local hidden variables — your fluid transport is non-local by necessity.",
+          "verdict": "WOUNDED → SURVIVED",
+          "fix_applied": "Non-simply-connected topological substrate; hidden variables are field properties, not particle properties"
+        },
+        "fresh_adversary": {
+          "strongest_counterargument": "The superdeterminism conspiracy objection: For superdeterminism to work across ALL Bell test experiments spanning decades with increasingly sophisticated randomization of measurement settings (cosmic photons, human choice, quantum random number generators), the 'conspiracy' must extend across space and time to ensure every measurement setting was predetermined to correlate with hidden variables dating back to the Big Bang. Each new Bell test with improved randomization adds another layer of implausibility. The non-simply-connected topological substrate fix doesn't address this — it just moves the conspiracy from particle properties to field properties without eliminating it.",
+          "verdict": "WOUNDED",
+          "fix_applied": "NONE — superdeterminism conspiracy is a structural/philosophical objection, not fixable by topological substrate choice"
+        },
+        "divergence_analysis": "The original and fresh adversaries both attack Bell's theorem, but the fresh adversary presses harder on the superdeterminism conspiracy. The original fix (topological substrate) reframes hidden variables as field properties — but the fresh adversary correctly notes this doesn't eliminate the conspiracy, it just relocates it. The 'conspiracy across all Bell tests' argument has grown stronger over time as experiments have improved randomization. This era remains the most theoretically interesting but empirically weakest claim."
+      },
+      {
+        "era": "Era 4 (2076-2126+)",
+        "claim": "c, G, ħ are unit-conversion artifacts; all SM constants derivable from π/φ geometry; physics is adelic",
+        "original_red_team": {
+          "question": "If c and G are emergent, they should vary across the universe — astronomical observations show perfect uniformity.",
+          "verdict": "WOUNDED → SURVIVED",
+          "fix_applied": "Topological conservation laws enforce global synchronization; π and φ ratios are geometrically fixed"
+        },
+        "fresh_adversary": {
+          "strongest_counterargument": "The Eddington precedent (1929) + total absence of any derivation. Arthur Eddington — one of the greatest astrophysicists of the 20th century — attempted to derive α ≈ 1/137 from pure number theory and failed spectacularly. The claim that SM constants 'can be' derived from π/φ is promissory — a future promise with zero current evidence. The 'adelic' claim is metaphysical, not physical: if p-adic completions predict the same observables as Archimedean physics, the claim is unfalsifiable; if they predict different observables, where are the anomalous measurements? The 'topological conservation laws' fix doesn't answer this — it invents new laws to explain why no evidence exists for the claim.",
+          "verdict": "WOUNDED",
+          "fix_applied": "NONE — historical precedent of failure + absence of derivation + unfalsifiability form a three-pronged attack"
+        },
+        "divergence_analysis": "The original red-team raised an empirical challenge (varying constants), which the fix addressed with conservation laws. The fresh adversary attacks at three levels simultaneously: historical (Eddington's failure as a reference class), methodological (promissory claims with no derivation), and epistemological (unfalsifiability). The topological conservation laws fix appears ad hoc — it explains away the absence of evidence rather than predicting evidence."
+      }
+    ],
+    "survival_rate_comparison": {
+      "original_red_team": {
+        "initial_survivors": 0,
+        "after_fixes": 4,
+        "survival_rate": "100%",
+        "note": "All 4 eras started WOUNDED and were fixed to SURVIVED by applying engineering/mathematical patches"
+      },
+      "fresh_adversary": {
+        "survivors": 0,
+        "wounded": 4,
+        "killed": 0,
+        "survival_rate": "0%",
+        "note": "No era achieved SURVIVED. The fresh adversaries identified deeper counterarguments that resist simple engineering fixes. The fixes were not accepted as adequate."
+      }
+    },
+    "key_findings": [
+      {
+        "finding": "100% → 0% survival rate drop",
+        "severity": "CRITICAL",
+        "explanation": "When reviewed by adversaries with no knowledge of prior red-team verdicts, NONE of the 4 eras survived. The original red-team's fixes (acoustic layers, polymer networks, topological substrates, conservation laws) were either addressing the wrong level of challenge or were deemed insufficient by fresh reviewers."
+      },
+      {
+        "finding": "Different counterarguments discovered",
+        "severity": "SIGNIFICANT",
+        "explanation": "The fresh adversaries identified fundamentally different counterarguments than the original red-team. Era 1: physical realizability vs thermal engineering. Era 2: witness-vs-gate categorical gap vs fluid turbulence. Era 3: conspiracy scale vs non-locality. Era 4: historical precedent + unfalsifiability vs constant variation. This suggests the original red-team was not comprehensive."
+      },
+      {
+        "finding": "Fix rejection pattern",
+        "severity": "SIGNIFICANT",
+        "explanation": "None of the fresh adversaries accepted the original red-team's fixes. This is concerning because it suggests the WOUNDED→SURVIVED transitions in the original CFPE forecast were biased towards survival — the fixes may have been accepted too readily because the system was motivated to preserve its own predictions."
+      },
+      {
+        "finding": "Depth of attack increases with era",
+        "severity": "MODERATE",
+        "explanation": "Era 1 challenges are engineering-level (albeit deep); Era 4 challenges are epistemological. The further out the forecast goes, the less the counterarguments are about physics and the more they're about the impossibility of verification. This pattern suggests the forecast is structurally weakest at its farthest horizon."
+      }
+    ],
+    "probability_adjustment_recommendation": "Based on 0% fresh survival rate, recommend applying a uniform 0.5× multiplier to all era probabilities (halve-all-priors check from deep-research Stage 5). This would reduce cascade EV from ~13.5% to ~6-7%, consistent with the fresh adversaries' systematic WOUNDED verdicts.",
+    "methodological_finding": "This experiment demonstrates that the CFPE forecast's original red-team protocol is vulnerable to SURVIVAL BIAS — the tendency for a system to accept its own fixes and declare survival. Fresh, independent adversarial review produces systematically harsher verdicts. Recommendation: make independent adversarial review mandatory for all future CFPE iterations, and track survival rates across multiple independent adversary runs."
+  }
+}

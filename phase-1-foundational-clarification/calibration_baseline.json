@@ -1,0 +1,102 @@
+{
+  "title": "CFPE Calibration Baseline: Brier Score Analysis",
+  "date": "2026-07-15",
+  "methodology": "The Brier score measures probabilistic forecast accuracy: BS = (1/N) × Σ(p_i − o_i)² where p_i is the predicted probability and o_i is the binary outcome (1 if event occurred, 0 if not). For future predictions with no observed outcomes, we compute the EXPECTED Brier score under the assumption of perfect calibration (outcomes occur at exactly the predicted frequencies). This establishes the calibration TARGET — the lowest achievable Brier score if probabilities are perfectly calibrated. Actual calibration error will be computed retrospectively as evidence arrives.",
+  "era_level_predictions": {
+    "description": "Each era has 3 mutually exclusive states (Optimistic, Baseline, Pessimistic). Each state prediction is treated as a binary event for Brier score computation.",
+    "predictions": [
+      {"era": 1, "state": "Optimistic", "probability": 0.25, "expected_brier_contribution": 0.1875},
+      {"era": 1, "state": "Baseline", "probability": 0.60, "expected_brier_contribution": 0.2400},
+      {"era": 1, "state": "Pessimistic", "probability": 0.15, "expected_brier_contribution": 0.1275},
+      {"era": 2, "state": "Optimistic", "probability": 0.338, "expected_brier_contribution": 0.2239},
+      {"era": 2, "state": "Baseline", "probability": 0.455, "expected_brier_contribution": 0.2480},
+      {"era": 2, "state": "Pessimistic", "probability": 0.208, "expected_brier_contribution": 0.1647},
+      {"era": 3, "state": "Optimistic", "probability": 0.383, "expected_brier_contribution": 0.2363},
+      {"era": 3, "state": "Baseline", "probability": 0.281, "expected_brier_contribution": 0.2020},
+      {"era": 3, "state": "Pessimistic", "probability": 0.336, "expected_brier_contribution": 0.2231},
+      {"era": 4, "state": "Optimistic", "probability": 0.310, "expected_brier_contribution": 0.2139},
+      {"era": 4, "state": "Baseline", "probability": 0.173, "expected_brier_contribution": 0.1431},
+      {"era": 4, "state": "Pessimistic", "probability": 0.517, "expected_brier_contribution": 0.2497}
+    ],
+    "N": 12,
+    "expected_brier_score": 0.2050,
+    "uncertainty_component": 0.2494,
+    "resolution_component": 0.0444,
+    "reliability_target": 0.0,
+    "interpretation": "Expected Brier score of 0.205 under perfect calibration. This is in the 'Fair' range (0.20-0.25), close to the baseline uncertainty of 0.249. The CFPE model achieves only modest resolution (0.0444) — meaning its probability assignments discriminate only slightly better than a uniform baseline. This reflects the model's heavy weighting toward Baseline/continuity scenarios with moderate deviations for Optimistic/Pessimistic tail events.",
+    "calibration_grade_scale": {"excellent": "< 0.10","good": "0.10–0.20","fair": "0.20–0.25","poor": "> 0.25"}
+  },
+  "candidate_level_predictions": {
+    "description": "Individual CFPE candidate predictions (18 candidates across 4 eras). Probabilities are marginal (not conditional on era state).",
+    "predictions": [
+      {"candidate": "E1: FCI braiding achieves logical qubit >1K", "probability": 0.25, "expected_brier": 0.1875},
+      {"candidate": "E1: Ultrametric threshold exceeds surface codes", "probability": 0.20, "expected_brier": 0.1600},
+      {"candidate": "E1: Gate-based QC scales past 10k qubits", "probability": 0.65, "expected_brier": 0.2275},
+      {"candidate": "E1: Thermal wall confirmed at 5k qubits", "probability": 0.40, "expected_brier": 0.2400},
+      {"candidate": "E1: FCI fabrication fails due to impurities", "probability": 0.15, "expected_brier": 0.1275},
+      {"candidate": "E2: √SWAP gate at 310K in synthetic channel", "probability": 0.338, "expected_brier": 0.2239},
+      {"candidate": "E2: Posner cluster quantum annealer demonstrated", "probability": 0.25, "expected_brier": 0.1875},
+      {"candidate": "E2: Bio-spintronic coherence >1ms at 310K", "probability": 0.30, "expected_brier": 0.2100},
+      {"candidate": "E2: Viscosity paradox resolved via viscoelastic theory", "probability": 0.40, "expected_brier": 0.2400},
+      {"candidate": "E3: CMB log-periodic oscillations detected >3σ", "probability": 0.383, "expected_brier": 0.2363},
+      {"candidate": "E3: Wheeler-DeWitt simulation confirms ultrametricity", "probability": 0.35, "expected_brier": 0.2275},
+      {"candidate": "E3: Superdeterminism gains >20% physicist acceptance", "probability": 0.15, "expected_brier": 0.1275},
+      {"candidate": "E3: Hydrodynamic QM reproduces Bell test results", "probability": 0.25, "expected_brier": 0.1875},
+      {"candidate": "E4: α derived from π/φ to <1% precision", "probability": 0.310, "expected_brier": 0.2139},
+      {"candidate": "E4: ≥3 SM constants derived geometrically", "probability": 0.20, "expected_brier": 0.1600},
+      {"candidate": "E4: Adelic framework produces verified prediction", "probability": 0.15, "expected_brier": 0.1275},
+      {"candidate": "E4: c, G, ħ shown to be unit-conversion artifacts", "probability": 0.173, "expected_brier": 0.1431},
+      {"candidate": "E4: Ostrowski's theorem recognized as organizing principle", "probability": 0.10, "expected_brier": 0.0900}
+    ],
+    "N": 18,
+    "expected_brier_score": 0.1901,
+    "uncertainty_component": 0.2377,
+    "resolution_component": 0.0476,
+    "reliability_target": 0.0,
+    "interpretation": "Candidate-level expected Brier of 0.190 is slightly better than era-level (0.205), reflecting the greater granularity of 18 individual predictions. Still in the 'Good/Fair' boundary range. The low resolution (0.0476) is characteristic of forecasts clustered near the base rate — most candidates have moderate probabilities (0.15-0.40) with few extreme assignments."
+  },
+  "calibration_curve_analysis": {
+    "forecast_bins": [
+      {"probability_bin": "0.00–0.10","predictions_in_bin": 1,"expected_outcome_rate": 0.10,"note": "Severe underconfidence if actual rate is much higher than predicted"},
+      {"probability_bin": "0.10–0.20","predictions_in_bin": 6,"expected_outcome_rate": 0.16,"note": "Moderately low-probability tail events; most pessimistic/optimistic scenarios"},
+      {"probability_bin": "0.20–0.30","predictions_in_bin": 6,"expected_outcome_rate": 0.25,"note": "Central cluster — the model's 'sweet spot' for discriminating predictions"},
+      {"probability_bin": "0.30–0.40","predictions_in_bin": 3,"expected_outcome_rate": 0.35,"note": "Above-average confidence predictions (bio-spintronics, CMB, geometric constants)"},
+      {"probability_bin": "0.40–0.50","predictions_in_bin": 2,"expected_outcome_rate": 0.425,"note": "Higher confidence on specific theoretical claims"},
+      {"probability_bin": "0.50–0.70","predictions_in_bin": 1,"expected_outcome_rate": 0.65,"note": "Single high-confidence prediction: gate-based QC scaling (continuity baseline)"},
+      {"probability_bin": "0.70–1.00","predictions_in_bin": 0,"expected_outcome_rate": null,"note": "No predictions above 0.70 — the model never expresses high certainty"}
+    ],
+    "calibration_concerns": [
+      {
+        "concern": "Overconfidence in extreme bins",
+        "detail": "Only 1 prediction in the 0.00-0.10 bin and 0 in the 0.70-1.00 bin. A well-calibrated forecast should regularly use extreme probabilities for high-certainty predictions. The CFPE model's avoidance of extreme probabilities suggests either epistemic humility (good) or inability to discriminate (concerning)."
+      },
+      {
+        "concern": "Clustering near 0.25",
+        "detail": "12 of 30 predictions (40%) fall in the 0.10-0.30 range — near the 'ignorance prior' of 0.25 (1 of 4 possible states). This suggests the model doesn't add much information beyond 'this is one of several possible outcomes.'"
+      },
+      {
+        "concern": "No 'near-certain' predictions",
+        "detail": "A good forecast should include some high-confidence predictions (0.90+) that can be decisively verified or falsified. The CFPE model's maximum probability is 0.65 (gate-based QC scaling) — even the 'sure thing' is only 2:1 odds."
+      }
+    ]
+  },
+  "comparative_benchmarks": {
+    "cfpe_model_expected_brier": 0.190,
+    "uniform_baseline_brier": 0.250,
+    "base_rate_baseline_brier": 0.238,
+    "perfect_forecast_brier": 0.0,
+    "worst_brier": 1.0,
+    "interpretation": "The CFPE model achieves an expected Brier improvement of 20.1% over the uniform baseline (0.190 vs 0.238) and 24.0% over pure guessing (0.190 vs 0.250). This is modest — a good forecast model typically achieves 30-50% improvement over baseline. The CFPE model is directionally better than guessing but not dramatically so.",
+    "phase_0_adjusted_note": "The evidence grading (P0.3) found that 80% of CFPE evidence is theoretical or speculative, and the adversarial re-red-team (P0.1) found 0% fresh survival rate. If we apply a 0.5× calibration uncertainty multiplier, the effective Brier score target degrades to ~0.215 (fair/poor boundary)."
+  },
+  "back_testing_schedule": {
+    "first_check": "2026-12-31",
+    "description": "At each check, compute actual Brier score for all predictions with closed falsification windows. Compare to the calibration target (0.190). A deviation >0.05 from target indicates miscalibration.",
+    "checks": [
+      {"date": "2026-12-31","type": "6-month","predictions_checkable": 0,"note": "Pre-scan: no falsification windows closed, but scan arXiv for preliminary evidence"},
+      {"date": "2027-12-31","type": "12-month","predictions_checkable": 1,"note": "E1-B-L1: gate-based QC scaling to 1000 qubits checkable"},
+      {"date": "2028-12-31","type": "24-month","predictions_checkable": 6,"note": "Major checkpoint: FCI coherence, wafer-scale fabrication, independent ultrametric threshold study"},
+      {"date": "2031-12-31","type": "60-month","predictions_checkable": 12,"note": "Mid-decade: most Era 1-2 candidates have checkable signposts"}
+    ]
+  }
+}

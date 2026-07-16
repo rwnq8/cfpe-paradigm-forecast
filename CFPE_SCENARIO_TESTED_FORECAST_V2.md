@@ -1,4 +1,4 @@
-# CFPE Scenario-Tested Forecast v2.0
+# CFPE Scenario-Tested Forecast v2.1
 ## Definitive Post-Phase-0-4 Synthesis
 
 **Project:** Cascade Forecasting & Paradigm Evaluation
@@ -27,7 +27,7 @@ The QNFO 100-Year Paradigm Forecast (CFPE) has been systematically attacked from
 
 **Converged estimate:** 6.5% [4%, 9%] — the probability of the full paradigm-shift cascade (FCI → bio-spintronics → hydrodynamic foundations → geometric constants), including NV-center alternative pathway.
 
-## Refined Era Probabilities (v2.0)
+## Refined Era Probabilities (v2.1)
 
 | Era | Horizon | P(Optimistic) | P(Baseline) | P(Pessimistic) | P(Wildcard) |
 |:----|:--------|:-------------|:------------|:---------------|:------------|

@@ -81,4 +81,31 @@ python cfpe_verify.py --schedule    # Show quarterly schedule
 python cfpe_verify.py               # Full arXiv verification (5 candidates)
 ```
 
-*Generated: 2026-07-15 | DOI: 10.5281/zenodo.21389042 | deep-research pipeline + research-planner v5.0*
+## Protocol Compliance (research v2.4)
+
+| Item | Status | Evidence |
+|:-----|:------|:---------|
+| PROJECT-PLAN.md | ✅ | v1.0 created 2026-07-18 |
+| RISK-REGISTER.md | ✅ | 8 risks identified, 1 CRITICAL |
+| DELIVERABLE-REGISTRY.md | ✅ | 24 items tracked (22 complete, 2 pending) |
+| .gitignore | ✅ | Python/OS/IDE/temp patterns |
+| Phase Closeout Protocol | ✅ | v1.0 tagged, committed, pushed |
+| Pre-Flight P1-P10 | ✅ | All HARD gates pass (post-fix) |
+| R2 Archive | ✅ | `qnfo-projects/qnfo/projects/cfpe-paradigm-forecast/` |
+| D1 living-paper | ✅ | `papers.qnfo.org/papers/cfpe-forecast-v2/` |
+| Papers Server | ✅ | HTTP 200 verified |
+| Zenodo DOI | ✅ | 10.5281/zenodo.21389042 |
+| IPFS / DNSLink | ❌ | Phase 7 pending |
+| Arweave / 4-D | ❌ | Phase 8 pending |
+
+## Deliverable Registry
+
+See [DELIVERABLE-REGISTRY.md](DELIVERABLE-REGISTRY.md) — 24 items across Phases 0-8.
+
+## Risk Register
+
+See [RISK-REGISTER.md](RISK-REGISTER.md) — 8 risks, 1 CRITICAL (CMB-S4 null).
+
+---
+
+*Generated: 2026-07-15 | Updated: 2026-07-18 (protocol v2.4 compliance) | DOI: 10.5281/zenodo.21389042 | research v2.4*
